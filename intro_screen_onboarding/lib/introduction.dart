@@ -26,8 +26,8 @@ class IntroductionState extends State<Introduction> {
             Center(
               child: Image(
                 image: AssetImage(widget.imageUrl),
-                height: 360.0,
-                width: 360.0,
+                height: 300.0,
+                width: 320.0,
               ),
             ),
             SizedBox(
@@ -38,13 +38,14 @@ class IntroductionState extends State<Introduction> {
               children: [
                 Text(
                   widget.title,
+                  softWrap: true,
                   textAlign: TextAlign.center,
-                  overflow: TextOverflow.clip,
+                  //overflow: TextOverflow.clip,
                   style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 30.0,
-                      height: 1.5,
-                      fontWeight: FontWeight.w600),
+                    color: Colors.black,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ],
             ),
@@ -53,8 +54,11 @@ class IntroductionState extends State<Introduction> {
             ),
             Text(
               widget.subTitle,
-              style:
-                  TextStyle(color: Colors.black, fontSize: 22.0, height: 1.5),
+              style: TextStyle(
+                color: Colors.black54,
+                fontSize: 15.0,
+                height: 1.5,
+              ),
               overflow: TextOverflow.clip,
               textAlign: TextAlign.center,
             ),
